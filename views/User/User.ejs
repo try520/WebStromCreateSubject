@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%include ../share/Head.ejs%>
+</head>
+<body>
+<h2><%= title %></h2>
+<p>读取MySql测试 <%= title %> 当前<%=CurModel.UserRealName%></p>
+<ul>
+    <%for( item in Data){%>
+    <li>UserID:<%=Data[item].UserId%> UserRealName:<%=Data[item].UserRealName%> , UserCurMoney:<%=Data[item].UserCurMoney%>
+        TaoBaoNick:<%=Data[item].TaoBaoNick%></li>
+    <%}%>
+</ul>
+<%include ../share/Foot.ejs%>
+</body>
+</html>
